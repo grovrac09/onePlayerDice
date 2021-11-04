@@ -1,0 +1,62 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.rules {
+    margin: 10px;
+    width: 450px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+.layout {
+    width: 60vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+i {
+    display: none;
+    font-size: 200px;
+    color: white;
+}
+
+#winner, #loser, #one, #two, #three, #four, #five, #six {
+    display: none;
+}
+
+button {
+    height: 45px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    border: 2px solid white; 
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: lightgreen;
+    color: black;
+  }
+
+#playAgainBtn {
+    display: none;
+}

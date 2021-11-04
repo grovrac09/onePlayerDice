@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a5a172da96.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>One person dice game</title>
+</head>
+<body>
+
+<section class="rules">
+    <p>How to play:
+        <ul>
+            <li>Roll to begin the game.</li>
+            <li>Win by scoring 20 or higher.</li>
+            <li>If you roll the number 1, you lose the game.</li>
+        </ul>
+    </p>
+</section>
+    
+<section class="layout"> 
+<h1 id="heading">Roll to begin..</h1>
+<h1 id="winner">Winner!</h1>
+<h1 id="loser">Game over!</h1>
+
+<section class="dice">
+<i id="one" class="fas fa-dice-one"></i>
+<i id="two" class="fas fa-dice-two"></i>
+<i id="three" class="fas fa-dice-three"></i>
+<i id="four" class="fas fa-dice-four"></i>
+<i id="five" class="fas fa-dice-five"></i>
+<i id="six" class="fas fa-dice-six"></i>
+</section>
+
+<p id=result></p>
+
+<button style="cursor:pointer" id="rollBtn" type="button">ROLL</button>   
+<button style="cursor:pointer" id="playAgainBtn" type="button">PLAY AGAIN</button>   
+
+</section>
+
+<script src="app.js"></script>    
+</body>
+</html>
+
