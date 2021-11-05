@@ -12,13 +12,29 @@ h1 {
     font-size: 36px;
 }
 
-.rules {
-    margin: 10px;
+p {
+    font-size: 26px;
+
+    margin: 25px;
+}
+
+li {
+    font-size: 18px;
+    margin: 15px;
+}
+
+.main {
     width: 450px;
     height: 200px;
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+}
+
+#rules {
+    display: none;
+    font-size: 18px;
+    margin: 0;
 }
 
 .layout {
@@ -36,12 +52,8 @@ i {
     color: white;
 }
 
-#winner, #loser, #one, #two, #three, #four, #five, #six {
-    display: none;
-}
-
 button {
-    height: 45px;
+    min-height: 45px;
     width: 100px;
     background-color: black;
     color: white;
@@ -50,10 +62,11 @@ button {
     font-family: 'Oswald', sans-serif;
     font-size: 16px;
     font-weight: bold;
+    margin: 5px;
 }
 
 button:hover {
-    background-color: lightgreen;
+    background-color: lightseagreen;
     color: black;
   }
 

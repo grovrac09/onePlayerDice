@@ -11,7 +11,9 @@
 </head>
 <body>
 
-<section class="rules">
+<section class="main">
+<button style="cursor:pointer" id="showRules">SHOW RULES</button>
+<section id="rules">
     <p>How to play:
         <ul>
             <li>Roll to begin the game.</li>
@@ -20,26 +22,14 @@
         </ul>
     </p>
 </section>
+</section>
     
 <section class="layout"> 
-<h1 id="heading">Roll to begin..</h1>
-<h1 id="winner">Winner!</h1>
-<h1 id="loser">Game over!</h1>
-
-<section class="dice">
-<i id="one" class="fas fa-dice-one"></i>
-<i id="two" class="fas fa-dice-two"></i>
-<i id="three" class="fas fa-dice-three"></i>
-<i id="four" class="fas fa-dice-four"></i>
-<i id="five" class="fas fa-dice-five"></i>
-<i id="six" class="fas fa-dice-six"></i>
-</section>
-
-<p id=result></p>
-
-<button style="cursor:pointer" id="rollBtn" type="button">ROLL</button>   
-<button style="cursor:pointer" id="playAgainBtn" type="button">PLAY AGAIN</button>   
-
+    <h1 id="heading">Roll to begin..</h1>
+    <section id="dice"></section>
+    <p id="result"></p>
+    <button style="cursor:pointer" id="rollBtn" type="button">ROLL</button>   
+    <button style="cursor:pointer" id="playAgainBtn" type="button">PLAY AGAIN</button>   
 </section>
 
 <script src="app.js"></script>    

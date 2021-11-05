@@ -1,92 +1,69 @@
-let diceOne = document.getElementById("one");
-let diceTwo = document.getElementById("two");
-let diceThree = document.getElementById("three");
-let diceFour = document.getElementById("four");
-let diceFive = document.getElementById("five");
-let diceSix = document.getElementById("six");
+// RULES
+let showBtn = document.getElementById("showRules");
 
+showBtn.addEventListener("click", () => {
+    if (rules.style.display == "none") {
+        rules.style.display = "block";
+        showBtn.textContent = "HIDE RULES";
+    } else if (rules.style.display = "block") {
+        rules.style.display = "none";
+        showBtn.textContent = "SHOW RULES";
+
+    }
+});
+
+// STYLING
+let dice = document.getElementById("dice");
 let heading = document.getElementById("heading");
-let winner = document.getElementById("winner");
-let loser = document.getElementById("loser");
 let result = document.getElementById("result");
 
+// BUTTONS
 let rollBtn = document.getElementById("rollBtn");
 let playAgain = document.getElementById("playAgainBtn");
 
+// DICE ROLLS
 let total = 0;
 
 rollBtn.addEventListener("click", () => {
   let num = Math.floor(Math.random()*6);
-  heading.style.display = "none";
+  result.style.display = "flex";
+  dice.style.display = "flex";
+  heading.innerHTML = "";
   if (num == 1) {
     total = 0;
-    loser.style.display = "block";
-    diceOne.style.display = "block";
+    result.style.display = "none";
+    heading.innerHTML = "Game over!"
     rollBtn.style.display = "none";
     playAgain.style.display = "block";
-    diceTwo.style.display = "none";
-    diceThree.style.display = "none";
-    diceFour.style.display = "none";
-    diceFive.style.display = "none";
-    diceSix.style.display = "none";
+    dice.innerHTML = '<i id="one" class="fas fa-dice-one"></i>';
   } else if (num == 2) {
     total += 2;
-    diceTwo.style.display = "block";
     result.textContent = `${total}`;
-    diceOne.style.display = "none";
-    diceThree.style.display = "none";
-    diceFour.style.display = "none";
-    diceFive.style.display = "none";
-    diceSix.style.display = "none";
-    winner.style.display = "none";
-    loser.style.display = "none";
+    heading.innerHTML = "";
+    dice.innerHTML = `<i id="two" class="fas fa-dice-two"></i>`;
   } else if (num == 3) {
     total += 3;
-    diceThree.style.display = "block";
     result.textContent = `${total}`;
-    diceOne.style.display = "none";
-    diceTwo.style.display = "none";
-    diceFour.style.display = "none";
-    diceFive.style.display = "none";
-    diceSix.style.display = "none";
-    winner.style.display = "none";
-    loser.style.display = "none";
+    heading.innerHTML = "";
+    dice.innerHTML = `<i id="three" class="fas fa-dice-three"></i>`;
   } else if (num == 4) {
     total += 4;
-    diceFour.style.display = "block";
     result.textContent = `${total}`;
-    diceOne.style.display = "none";
-    diceTwo.style.display = "none";
-    diceThree.style.display = "none";
-    diceFive.style.display = "none";
-    diceSix.style.display = "none";
-    winner.style.display = "none";
-    loser.style.display = "none";
+    heading.innerHTML = "";
+    dice.innerHTML = `<i id="four" class="fas fa-dice-four"></i>`;
   } else if (num == 5) {
     total += 5;
-    diceFive.style.display = "block";
     result.textContent = `${total}`;
-    diceOne.style.display = "none";
-    diceTwo.style.display = "none";
-    diceThree.style.display = "none";
-    diceFour.style.display = "none";
-    diceSix.style.display = "none";
-    winner.style.display = "none";
-    loser.style.display = "none";
+    heading.innerHTML = "";
+    dice.innerHTML = `<i id="five" class="fas fa-dice-five"></i>`;
   } else if (num == 6) {
     total += 6;
-    diceSix.style.display = "block";
     result.textContent = `${total}`;
-    diceOne.style.display = "none";
-    diceTwo.style.display = "none";
-    diceThree.style.display = "none";
-    diceFour.style.display = "none";
-    diceFive.style.display = "none";
-    winner.style.display = "none";
-    loser.style.display = "none";
+    heading.innerHTML = "";
+    dice.innerHTML = `<i id="six" class="fas fa-dice-six"></i>`;
   } if (total >= 20) {
-    winner.style.display = "block";
     result.textContent = `${total}`;
+    heading.innerHTML = "Winner!";
     rollBtn.style.display = "none";
     playAgain.style.display = "block";
   }
@@ -94,16 +71,10 @@ rollBtn.addEventListener("click", () => {
 
 playAgain.addEventListener("click", () => {
   total = 0;
-  result.textContent = "Roll to begin..";
+  result.style.display= "none";
+  heading.innerHTML = "Roll to begin..";
   rollBtn.style.display = "block";
   playAgain.style.display = "none";
-  diceOne.style.display = "none";
-  diceTwo.style.display = "none";
-  diceThree.style.display = "none";
-  diceFour.style.display = "none";
-  diceFive.style.display = "none";
-  diceSix.style.display = "none";
-  winner.style.display = "none";
-  loser.style.display = "none";
+  dice.style.display = "none";
 });
 
