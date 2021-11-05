@@ -25,6 +25,7 @@ let playAgain = document.getElementById("playAgainBtn");
 let total = 0;
 
 rollBtn.addEventListener("click", () => {
+  document.getElementById("diceMp3").play();
   let num = Math.floor(Math.random()*6);
   result.style.display = "flex";
   dice.style.display = "flex";
